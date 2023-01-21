@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .cursor-pointer{
+        cursor: pointer;
+     }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+<body>
+   <div class="w-100 my-5">
+    <div class="d-flex justify-content-center align-items-center gap-5">
+        <video class="video-player"  id="localVideo" autoplay playsinline ></video>
+        <video class="video-player d-none"  id="remoteVideo" autoplay playsinline ></video>
+    </div>
+   <div class="d-flex max-auto flex-column align-items-center my-5">
+    <div class="d-flex flex-column mb-3">
+        <span class="d-flex gap-2">LocalId:<p id="myId"></p></span>
+    <span class="d-flex gap-2">Remote Id:<p id="remoteId"></p></span>
+    </div>
+    
+    <div class="row gap-2">
+        <div class="input-group col-6 mb-3">
+            <span class="input-group-text" id="basic-addon1">
+                <i class="bi-phone"></i>
+            </span>
+            <input id="callId" type="text" class="form-control" placeholder="Caller id" aria-label="remoteId" aria-describedby="basic-addon1">
+          </div>
+        <div class="btn-group col-6 w-100 gap-2">
+            <button class="btn btn-primary" id="call" onclick="call();">Call</button>
+    <button id="stop" class="btn btn-danger" onclick="stop();" disabled>Stop</button>
+
+        </div>
+    </div>
+   </div>
+   </div>
+    <script src="./script.js"></script>
+</body>
+</html>
